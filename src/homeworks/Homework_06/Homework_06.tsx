@@ -55,3 +55,4 @@ function Homework_06() {
 }
 
 export default Homework_06;
+}
