@@ -1,34 +1,30 @@
+import { v4 } from "uuid";
+
 import "./styles.css";
+import { type Car } from "./types";
 
-// 1. Определяем интерфейс для машины
-interface Car {
-  brand: string;
-  price: number;
-  isDiesel: boolean;
-}
-
-// 2. Массив машин с типизацией
-const cars: Car[] = [
-  { brand: "BMW", price: 20000, isDiesel: true },
-  { brand: "Mercedes", price: 22000, isDiesel: false },
-  { brand: "Porshe", price: 50000, isDiesel: true },
-  { brand: "Nissan", price: 25000, isDiesel: false },
-  { brand: "Audi", price: 50000, isDiesel: true },
-];
-
-// 3. Компонент
 function Homework_06() {
-  return (
-    <div className="cars_wrapper">
-      {cars.map((car, index) => (
-        <div key={index} className="car_card">
-          <h2>{car.brand}</h2>
-          <p>Цена: {car.price} $</p>
-          <p>Тип топлива: {car.isDiesel ? "Дизель" : "Бензин"}</p>
-        </div>
-      ))}
-    </div>
-  );
+  const cars: Car[] = [
+    { brand: "BMW", price: 20000, isDiesel: true },
+    { brand: "Mercedes", price: 22000, isDiesel: false },
+    { brand: "Porshe", price: 50000, isDiesel: true },
+    { brand: "Nissan", price: 25000, isDiesel: false },
+    { brand: "Audi", price: 50000, isDiesel: true },
+  ];
+
+  const carCards = cars.map((car: Car) => {
+    return (
+      <div key={v4()} className="car_card">
+        <p className="car_info">Brand: {car.brand}</p>
+        <p className="car_info">Price: {car.price}</p>
+        <p className="car_info">
+          Is Diesel: {car.isDiesel ? "Diesel" : "Non-diesel"}
+        </p>
+      </div>
+    );
+  });
+
+  return <div className="homework_06_wrapper">{carCards}</div>;
 }
 
 export default Homework_06;
