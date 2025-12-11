@@ -1,8 +1,15 @@
 import Button from "components/Button/Button";
+
 import { type FeedbackProps } from "./types";
 import "./styles.css";
 
-function Feedback({ like, dislike, onDislike, onLike, resetResults }: FeedbackProps) {
+function Feedback({
+  like,
+  dislike,
+  onDislike,
+  onLike,
+  resetResults,
+}: FeedbackProps) {
   return (
     <div className="feedback-wrapper">
       <div className="feedback-control">
