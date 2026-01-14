@@ -1,38 +1,61 @@
-import React, { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
-import Input from "./Input";
-import Button from "./Button";
-import { PageWrapper, NotesList, NoteItem, InputArea } from "./styles";
+import { useState, type ChangeEvent, type FormEvent } from "react";
+import {v4} from 'uuid'
 
-// интерфейс прямо здесь
-interface Note {
-  id: string;
-  text: string;
-}
+import Button from "components/Button/Button";
+import Input from "components/Input/Input";
+
+import {
+  PageWrapper,
+  NoteForm,
+  ButtonControl,
+  Notes,
+  NoteItem,
+  NoteTitle,
+} from "./styles";
 
 function Homework_09() {
   const [note, setNote] = useState<string>("");
-  const [notes, setNotes] = useState<Note[]>([]);
+  const [savedNotes, setSavedNotes] = useState<string[]>([]);
 
-  const addNote = () => {
-    if (!note.trim()) return;
-    const newNote: Note = { id: uuidv4(), text: note };
-    setNotes((prev) => [...prev, newNote]);
-    setNote("");
+  const onNoteChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setNote(event.target.value);
   };
+
+  const onSaveNote = (event: FormEvent) => {
+    event.preventDefault();
+    // prevValue === savedNotes в момент вызова функции setSavedNotes
+    setSavedNotes((prevValue: string[]) => {
+      console.log(prevValue);
+      return [...prevValue, note];
+    });
+  };
+
+  console.log(savedNotes);
+  // Допустим savedNotes = ["Coocking", "Shopping"]
+  // Наша задача вернуть новый массив notesList который будет иметь вид(условно говоря) = [<NoteItem>Coocking</NoteItem>, <NoteItem>Shopping</NoteItem>]
+  const notesList = savedNotes.map((value: string) => {
+    return <NoteItem key={v4()}>{value}</NoteItem>
+  });
 
   return (
     <PageWrapper>
-      <h2>Homework 09</h2>
-      <InputArea>
-        <Input value={note} onChange={(e) => setNote(e.target.value)} />
-        <Button onClick={addNote}>Add</Button>
-      </InputArea>
-      <NotesList>
-        {notes.map((n) => (
-          <NoteItem key={n.id}>{n.text}</NoteItem>
-        ))}
-      </NotesList>
+      <NoteForm onSubmit={onSaveNote}>
+        <Input
+          id="todo-input"
+          name="todo"
+          placeholder="Enter your note"
+          label="Note"
+          value={note}
+          onChange={onNoteChange}
+        />
+        <ButtonControl>
+          <Button name="Add" type="submit" />
+        </ButtonControl>
+      </NoteForm>
+      <Notes>
+        <NoteTitle>Your notes</NoteTitle>
+        {notesList}
+      </Notes>
     </PageWrapper>
   );
 }

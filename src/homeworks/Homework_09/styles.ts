@@ -1,46 +1,46 @@
-import styled from "styled-components";
+import styled from "@emotion/styled";
 
 export const PageWrapper = styled.div`
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fafafa;
-`;
-
-export const InputArea = styled.div`
   display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-`;
-
-export const StyledInput = styled.input`
+  flex-direction: column;
+  align-items: center;
   flex: 1;
-  padding: 8px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
+  padding: 100px;
+  gap: 30px;
 `;
 
-export const StyledButton = styled.button`
-  padding: 8px 12px;
-  background: #007acc;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background: #005fa3;
-  }
+export const NoteForm = styled.form`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  width: 600px;
+  height: fit-content;
 `;
 
-export const NotesList = styled.ul`
-  list-style: none;
-  padding: 0;
+export const ButtonControl = styled.div`
+  width: 200px;
+`;
+
+export const Notes = styled.ol`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 400px;
+  height: fit-content;
+  border: 2px solid black;
+  padding: 30px;
+  border-radius: 6px;
+`;
+
+export const NoteTitle = styled.p`
+  font-size: 24px;
+  font-weight: bold;
+  color: purple;
 `;
 
 export const NoteItem = styled.li`
-  padding: 6px 8px;
-  border-bottom: 1px solid #ddd;
+  font-size: 20px;
+  font-weight: bold;
 `;
