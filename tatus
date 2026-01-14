@@ -1,7 +1,63 @@
-[33m5c7c70d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhomework-07[m[33m, [m[1;31morigin/homework-07[m[33m)[m Resolved conflict in Homework_06.tsx
-[33me2efef6[m Resolved conflict in Homework_06.tsx
-[33me32016e[m Homework 07: вынесена логика Feedback в Homework_07
-[33m7849572[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #1 from olga1107969-hue/homework-06
-[33m69023f3[m[33m ([m[1;31morigin/homework-06[m[33m, [m[1;32mhomework-06[m[33m)[m Исправления по замечаниям в Homework 06
-[33m4f08765[m[33m ([m[1;32mmain[m[33m)[m Homework 06: протипизирован массив cars и выведены карточки через map
-[33m6b3a631[m Initial commit
+[33mcommit 51fe59a201ea2dd48600c9122b72c8fc42d11553[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mhomework-09[m[33m, [m[1;31morigin/homework-09[m[33m)[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Thu Dec 11 18:05:32 2025 +0200
+
+    Homework 09: Input + Button + Notes list
+
+[33mcommit b6ba29ca65fadd6b10eefb3ff9f3e9c4df1b2e8b[m[33m ([m[1;31morigin/homework-08[m[33m, [m[1;32mhomework-08[m[33m)[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Thu Dec 11 10:42:27 2025 +0200
+
+    Homework 08: реализован Lesson_08
+
+[33mcommit 1233799cd75a4e6a2cd1e672da82f08445819c17[m[33m ([m[1;31morigin/homework-07[m[33m, [m[1;32mhomework-07[m[33m)[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Thu Dec 11 06:41:56 2025 +0200
+
+    fix: исправлен Homework_07 по примеру урока
+
+[33mcommit 5c7c70df576b4d611400e217b1432683dd6364fb[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Wed Dec 10 08:11:19 2025 +0200
+
+    Resolved conflict in Homework_06.tsx
+
+[33mcommit e2efef6691649c204013331ef8cb536ab85857eb[m
+Merge: e32016e 7849572
+Author: Olga <olga1107969@gmail.com>
+Date:   Wed Dec 10 08:03:44 2025 +0200
+
+    Resolved conflict in Homework_06.tsx
+
+[33mcommit e32016e10c3ee9dd1df8a89bb85e4050c1b5a867[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Wed Dec 10 07:50:27 2025 +0200
+
+    Homework 07: вынесена логика Feedback в Homework_07
+
+[33mcommit 784957244c84296be7cc1c60a5ab88de00fd6784[m
+Merge: 6b3a631 69023f3
+Author: olga1107969-hue <olga1107969@gmail.com>
+Date:   Thu Dec 4 03:26:15 2025 +0200
+
+    Merge pull request #1 from olga1107969-hue/homework-06
+    
+    Homework 06: протипизирован массив cars и выведены карточки через map
+
+[33mcommit 69023f321a816002e432eccb54be7c480eb39a45[m[33m ([m[1;31morigin/homework-06[m[33m, [m[1;32mhomework-06[m[33m)[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Thu Dec 4 03:21:12 2025 +0200
+
+    Исправления по замечаниям в Homework 06
+
+[33mcommit 4f08765669820ef015dc7f61123076a43210c81b[m[33m ([m[1;32mmain[m[33m)[m
+Author: Olga <olga1107969@gmail.com>
+Date:   Sun Nov 30 07:29:23 2025 +0200
+
+    Homework 06: протипизирован массив cars и выведены карточки через map
+
+[33mcommit 6b3a631575a3f141f247472a32ada6bf306eec9a[m
+Author: olga1107969-hue <olga1107969@gmail.com>
+Date:   Sun Nov 30 00:24:41 2025 +0200
+
+    Initial commit
