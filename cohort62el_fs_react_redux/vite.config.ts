@@ -7,6 +7,19 @@ import packageJson from "./package.json" with { type: "json" }
 export default defineConfig({
   plugins: [react()],
 
+  resolve: {
+    alias: {
+      assets: path.resolve(__dirname, "src/assets"),
+      constants: path.resolve(__dirname, "src/constants"),
+      components: path.resolve(__dirname, "src/components"),
+      consultations: path.resolve(__dirname, "src/consultations"),
+      homeworks: path.resolve(__dirname, "src/homeworks"),
+      lessons: path.resolve(__dirname, "src/lessons"),
+      pages: path.resolve(__dirname, "src/pages"),
+      styles: path.resolve(__dirname, "src/styles"),
+    },
+  },
+
   server: {
     open: true,
   },
