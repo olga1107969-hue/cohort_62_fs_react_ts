@@ -1,7 +1,9 @@
-import Lesson_11 from "./lessons/Lesson_11/Lesson_11";
+import Homework_12 from "./homeworks/Homework_12/Homework_12";
 
 function App() {
-  return <Lesson_11 />;
+  return (
+    <Homework_12 />
+  );
 }
 
 export default App;
