@@ -32,7 +32,7 @@ function OutputForm({person}: OutputProps) {
         <UserText>{person.job_position}</UserText>
         <Button name="Delete" isRed onClick={onDelete}/>
       </OutputWrapper>
-      <Button name="Remove All Employees" isRed onClick={removeAllEmployees}/>
+      <Button name="Remove All Employees!" isRed onClick={removeAllEmployees}/>
     </EmployeesWrapper>
   );
 }
