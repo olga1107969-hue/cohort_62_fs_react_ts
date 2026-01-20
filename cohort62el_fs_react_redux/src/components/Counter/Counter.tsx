@@ -5,7 +5,7 @@ import {
 } from "store/redux/counterSlice/counterSlice"
 import Button from "components/Button/Button"
 import { ButtonControl, Count, CounterWrapper } from "./styles"
-import { log } from "console"
+
 
 function Counter() {
   // hook не принимает аргументов просто возвращает функцию которая передает действие в store
