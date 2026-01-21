@@ -5,19 +5,14 @@ export interface LayoutProps {
 }
 
 export interface EmployeeData {
+  id: string;
   name: string;
   surname: string;
   age: string;
   job_position: string;
 }
 
-// export interface EmployeeContextType {
-//   employeeData: EmployeeData;
-//   setEmployeeData: (data: EmployeeData) => void;
-// }
 
-export interface EmployeeContextType {
-  employeeData: EmployeeData[];
-  setEmployeeData: Dispatch<SetStateAction<EmployeeData[]>>;
-}
+
+
 

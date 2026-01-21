@@ -1,5 +1,7 @@
 import { createAppSlice } from "store/createAppSlice"
 import { EmployeeInitialState } from "./types"
+import { PayloadAction } from "@reduxjs/toolkit"
+import { EmployeeData } from "lessons/EmployeeProject/types"
 
 
 const employeeInitialState: EmployeeInitialState  = {
@@ -10,10 +12,13 @@ export const employeeSlice  = createAppSlice({
   name: "EMPLOYEE_CARD",
   initialState: employeeInitialState,
   reducers:{
-    personCard: (state: EmployeeInitialState) => {
-      state.person = state.person
+    personCard: (state: EmployeeInitialState,action: PayloadAction<EmployeeData>) => {
+      state.person.push(action.payload)
+      console.log(action);
+      
     },
-    deleteCard: () => employeeInitialState
+    deleteCard: () => employeeInitialState,
+    deleteCards: () => employeeInitialState,
   },
   selectors: {
     person: (state: EmployeeInitialState) => {

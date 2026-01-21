@@ -17,11 +17,12 @@ function OutputForm({person}: any) {
 
   const dispatch = useAppDispatch()
   
-
-  
-
-  const onDelete = () =>{};
-  const removeAllEmployees = () =>{};
+  const onDelete = () =>{
+    dispatch(employeeSliceAction.deleteCard(person))
+  };
+  const removeAllEmployees = () =>{
+    dispatch(employeeSliceAction.deleteCards())
+  };
   return (
     <EmployeesWrapper>
       <OutputWrapper>

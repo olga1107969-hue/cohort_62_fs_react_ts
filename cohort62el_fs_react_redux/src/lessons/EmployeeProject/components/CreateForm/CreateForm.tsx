@@ -3,11 +3,14 @@ import * as Yup from "yup";
 
 import Button from "components/Button/Button";
 import Input from "components/Input/Input";
-import { EmployeeContext } from "../../Layout"
+
 
 import { CREATE_FORM_VALUES } from "./types";
 import { CreateFormContainer, InputsContainer} from "./styles";
-import { useContext } from "react";
+import { useAppDispatch } from "store/hooks";
+import { employeeSliceAction } from "store/redux/employeeSlice/employeeSlice";
+import { EmployeeData } from "lessons/EmployeeProject/types";
+import { v4 } from "uuid";
 
 const validationShema = Yup.object().shape({
   [CREATE_FORM_VALUES.NAME]: Yup.string()
@@ -31,7 +34,7 @@ const validationShema = Yup.object().shape({
 
 function CreateForm() {
 
-  const {setEmployeeData} = useContext(EmployeeContext);
+  const dispatch = useAppDispatch();
 
   const formik = useFormik({
       initialValues: {
@@ -43,7 +46,9 @@ function CreateForm() {
       validationSchema: validationShema,
       validateOnChange: false,
       onSubmit: (values) => {
-        setEmployeeData(prev => [...prev, values]);      // передаем данные введенные пользователем с values в setEmployeeData
+        const newEmployee: EmployeeData = {id: v4(),...values}
+
+        dispatch(employeeSliceAction.personCard(newEmployee));      // передаем данные введенные пользователем с values 
         console.log("formik");
         console.log(values);
       },
