@@ -21,7 +21,7 @@ function OutputForm({person}: any) {
   const dispatch = useAppDispatch()
   
   const onDelete = () =>{
-    dispatch(employeeSliceAction.deleteCard(person))
+    dispatch(employeeSliceAction.deleteCard(person.id))
   };
 
   return (
